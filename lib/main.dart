@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:formulario_validaciones/screen/form_client.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: ()=>Navigator.push(context,MaterialPageRoute(builder: (context)=>FormClientScreen())),
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
