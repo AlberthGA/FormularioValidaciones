@@ -5,6 +5,7 @@ import 'package:formulario_validaciones/widgets/components/text_field_base.dart'
 class FormClientScreen extends StatelessWidget {
 
   TextEditingController ctrlRFC = TextEditingController();
+  TextEditingController ctrlNumberPhone = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +16,8 @@ class FormClientScreen extends StatelessWidget {
       body: Form(
         child: ListView(
           children:[
-            TextFieldBase("RFC",ctrlRFC,validateText:ValidateText.rfc)
-
+            TextFieldBase("RFC",ctrlRFC,validateText:ValidateText.rfc),
+            TextFieldBase("Numero telefono",ctrlNumberPhone,validateText:ValidateText.phoneNumber)
           ] ),) 
     );
   }
